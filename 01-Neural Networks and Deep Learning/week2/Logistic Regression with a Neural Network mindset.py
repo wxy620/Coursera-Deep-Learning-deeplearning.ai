@@ -229,10 +229,8 @@ if __name__ == '__main__':
 
 #测试自己的图片是否准确
 def test_own_image():
-    ## START CODE HERE ## (PUT YOUR IMAGE NAME)
+    ## (PUT YOUR IMAGE NAME)
     my_image = "cat_in_iran.jpg"  # change this to the name of your image file
-    ## END CODE HERE ##
-
     # We preprocess the image to fit your algorithm.
     fname = "images/" + my_image
     image = np.array(ndimage.imread(fname, flatten=False))
