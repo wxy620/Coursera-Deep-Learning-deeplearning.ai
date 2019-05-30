@@ -243,7 +243,13 @@ if __name__ == '__main__':
     plt.rcParams['image.cmap'] = 'gray'
 
     np.random.seed(1)
+    # forward
+    X, parameters = L_model_forward_test_case()
+    AL, caches = L_model_forward(X, parameters)
+    print("AL = " + str(AL))
+    print("Length of caches list = " + str(len(caches)))
 
+    # backward
     AL, Y_assess, caches = L_model_backward_test_case()
     grads = L_model_backward(AL, Y_assess, caches)
     print("dW1 = " + str(grads["dW1"]))
